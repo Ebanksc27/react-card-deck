@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+  background-color: #228B22; 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-container {
+  position: relative;
+  height: 200px; 
+  z-index: 1; /* Ensure that the card container is above the base level but below the buttons */
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* The translate values center the card, and the rotate adds the stacking effect */
+  /* Adjust the rotate degree if necessary for a more noticeable or less noticeable fan effect */
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+button {
+  position: relative;
+  z-index: 10;
+  margin: 10px;
+  padding: 10px 20px;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
